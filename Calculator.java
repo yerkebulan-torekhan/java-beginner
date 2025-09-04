@@ -16,26 +16,21 @@ public class Calculator {
         double result = 0;
 
         switch (op) {
-            case '+':
-                result = a + b;
-                break;
-            case '-':
-                result = a - b;
-                break;
-            case '*':
-                result = a * b;
-                break;
-            case '/':
+            case '+' -> result = a + b;
+            case '-' -> result = a - b;
+            case '*' -> result = a * b;
+            case '/' -> {
                 if (b != 0) {
                     result = a / b;
                 } else {
                     System.out.println("Ошибка: деление на ноль!");
                     return;
                 }
-                break;
-            default:
+            }
+            default -> {
                 System.out.println("Неизвестная операция");
                 return;
+            }
         }
 
         System.out.println("Результат: " + result);
